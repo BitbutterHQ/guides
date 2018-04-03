@@ -1,6 +1,8 @@
+# Getting Started
+
 Welcome to Bitbutter guides! Let's get started by first navigating to [https://docs.bitbutter.com](https://docs.bitbutter.com). On the top right corner, click the orange button that says "Run in Postman."
 
-<img width="500px" src="https://i.imgur.com/SGNKqpd.jpg">
+<img width="720px" src="https://i.imgur.com/SGNKqpd.jpg">
 
 Go ahead and install Postman if you haven't already. Postman will help us get started with the API right away. We have built in the pre-request signatures that are required for each request as well as populating the correct environment variables.
 
@@ -10,23 +12,23 @@ Let's quickly go over the Postman interface. There are three main views to pay a
 
 ### Routes View
 
-<img width="500px" src="https://i.imgur.com/I1Ag0fI.jpg">
+<img width="720px" src="https://i.imgur.com/I1Ag0fI.jpg">
 
 The Routes View lists out the routes provided by our API.
 
 ### Main View
 
-<img width="500px" src="https://i.imgur.com/5SKvekX.jpg">
+<img width="720px" src="https://i.imgur.com/5SKvekX.jpg">
 
 The Main View changes whenever we click a route frome the Routes View. We can interact with the specified route by changing body and query parameters and sending requests to the specified endpoint.
 
 ### Environment View
 
-<img width="500px" src="https://i.imgur.com/YY5SYaz.jpg">
+<img width="720px" src="https://i.imgur.com/YY5SYaz.jpg">
 
 The Environment View is where we can set variables that we can access in our routes. We have prepopulated some of the variables for you such as `ENDPOINT` and `PARTNERSHIP_ID`.
 
-<img width="500px" src="https://i.imgur.com/tsjruz2.jpg">
+<img width="720px" src="https://i.imgur.com/tsjruz2.jpg">
 
 By click on the eye icon and clicking 'Edit', we can add, modify and delete environment variables.
 
@@ -46,17 +48,17 @@ We need valid partner credentials to access the Partner API. It is essential tha
 
 Let's navigate to the [Partner API](https://documenter.getpostman.com/view/3815526/RVu2kpi9) and make our first requests using Postman
 
-<img width="500px" src="https://i.imgur.com/YYqvmTb.jpg">
+<img width="720px" src="https://i.imgur.com/YYqvmTb.jpg">
 
 ### Headers
 
 Let's click on the `create user` route on the Routes View. We will get a response with the user credentials that we can now use to access the User API.
 
-<img width="500px" src="https://i.imgur.com/gyezu13.jpg">
+<img width="720px" src="https://i.imgur.com/gyezu13.jpg">
 
 Let's take a quick look at the Headers tab in the Main View to get a better understanding of how we were authenticated to access the endpoint.
 
-<img width="500px" src="https://i.imgur.com/rGpzU4p.jpg">
+<img width="720px" src="https://i.imgur.com/rGpzU4p.jpg">
 
 These are the four required headers for accessing the Partner API. 
 
