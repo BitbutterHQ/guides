@@ -232,7 +232,6 @@ Once the sync is completed, we can verify that the sync was successful by naviga
 
 ## Get User Ledger
 
-// 14 getting started
 <img width="720px" src="https://i.imgur.com/CHNvjsC.jpg">
 
 We can get the ledger (history of withdrawals, deposits, and trades) through the `get user ledger` route as well.
