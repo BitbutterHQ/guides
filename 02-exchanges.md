@@ -32,7 +32,7 @@ Users can connect their cryptocurrency exchange accounts by providing a read-onl
 
 To connect an exchange, navigate to `connect exchange` in Postman. This is going to be a `POST` request where we send along body parameters where we provide the exchange credentials as well as the id of the exchange.
 
-```json
+```javascript
 { 
   "credentials": { 
     "api_key": "{{BINANCE_API_KEY}}",
@@ -49,7 +49,7 @@ We can get the id of the exchange that we want by first making a request to `get
 
 Once an exchange is connected, it becomes a connected exchange. We can see all the exchanges users have connected by making a request to `get user connected exchanges` route.
 
-```json
+```javascript
 {
     "connected_exchanges": [
         {
@@ -75,7 +75,7 @@ Once an exchange is connected, we can get the current balances by making a reque
 
 If we want to change this, we can first make a request to `get user connected exchanges` to get the id of the connected exchange we want, and then modifying the `CONNECTED_EXCHANGE_ID` in the Environment View.
 
-```json
+```javascript
 [
     {
         "connectable": {
@@ -106,7 +106,7 @@ We can get the ledger of a connected exchange as well. A ledger is a history of 
 
 Similar to the balances route, we need to provide the right value to the `CONNECTED_EXCHANGE_ID` environment variable.
 
-```json
+```javascript
 [
     {
         "connectable": {
