@@ -90,3 +90,149 @@ const hmac = crypto.createHmac('sha256', key);
 // 4. Sign with the sha256 hmac and base64 encode the result
 hmac.update(prehash).digest('base64');
 ```
+
+## Connecting an Exchange
+
+Now that we created a user, let's connect an exchange account to it. We currently support connection on Binance, Bittrex, Coinbase, GDAX, Kraken and Poloniex. For our example we will be connecting Binance. Go ahead and navigate to the the [User API](https://docs.bitbutter.com) and then click on the the `connect exchange` route from the Routes View.
+
+<img width="720px" src="https://i.imgur.com/hkAwntb.jpg">
+
+### Body Parameters
+
+Let's take a look at what body parameters we are sending up.
+
+<img width="720px" src="https://i.imgur.com/R7l2gvl.jpg">
+
+We have to provide the necessary values for `BINANCE_API_KEY`, `BINANCE_SECRET`, and `BINANCE_EXCHANGE_ID`. We have populated the `BINANCE_EXCHANGE_ID` but you'll have to update the values for the API key and secret. The `USER_ID` environment was automatically set by Postman when we initially created the user.
+
+If you want to try another exchange, you can modify the body parameters like the following for corresponding exchange.
+
+#### Binance
+
+```
+{ 
+  "credentials": { 
+    "api_key": "{{BINANCE_API_KEY}}",
+    "secret": "{{BINANCE_SECRET}}"
+  },
+  "exchange_id": "{{BINANCE_EXCHANGE_ID}}",
+  "user_id": "{{USER_ID}}"
+}
+```
+
+#### Bittrex
+
+```
+{ 
+  "credentials": { 
+    "api_key": "{{BITTREX_API_KEY}}",
+    "secret": "{{BITTREX_SECRET}}"
+  },
+  "exchange_id": "{{BITTREX_EXCHANGE_ID}}",
+  "user_id": "{{USER_ID}}"
+}
+```
+
+#### Coinbase
+
+```
+{ 
+  "credentials": { 
+    "api_key": "{{COINBASE_API_KEY}}",
+    "secret": "{{COINBASE_SECRET}}"
+  },
+  "exchange_id": "{{COINBASE_EXCHANGE_ID}}",
+  "user_id": "{{USER_ID}}"
+}
+```
+
+#### GDAX
+
+```
+{ 
+  "credentials": { 
+    "api_key": "{{GDAX_API_KEY}}",
+    "secret": "{{GDAX_SECRET}}"
+    "password": "{{GDAX_PASSWORD}}"
+  },
+  "exchange_id": "{{GDAX_EXCHANGE_ID}}",
+  "user_id": "{{USER_ID}}"
+}
+```
+
+#### Kraken
+
+```
+{ 
+  "credentials": { 
+    "api_key": "{{KRAKEN_API_KEY}}",
+    "secret": "{{KRAKEN_SECRET}}"
+  },
+  "exchange_id": "{{KRAKEN_EXCHANGE_ID}}",
+  "user_id": "{{USER_ID}}"
+}
+```
+
+#### Poloniex
+
+```
+{ 
+  "credentials": { 
+    "api_key": "{{POLONIEX_API_KEY}}",
+    "secret": "{{POLONIEX_SECRET}}"
+  },
+  "exchange_id": "{{POLONIEX_EXCHANGE_ID}}",
+  "user_id": "{{USER_ID}}"
+}
+```
+
+### Headers
+
+<img width="720px" src="https://i.imgur.com/xkWZF21.jpg">
+
+Let's take a look at the headers that we are providing to this endpoint.
+
+#### User Credentials
+
+All User API HTTP requests must contain the following headers:
+
+* BB-USER-ID: The user id
+
+* BB-ACCESS-KEY: The user api key
+
+* BB-ACCESS-SIGN: Base64 encoded signature (see Authentication)
+
+* BB-TIMESTAMP: A timestamp for your request
+
+#### Partner Credentials
+
+All Partner API HTTP requests must contain the following headers:
+
+* BB-PARTNER-ID: The partner id
+
+* BB-ACCESS-KEY: The partner api key
+
+* BB-ACCESS-SIGN: Base64 encoded signature (see Authentication)
+
+* BB-TIMESTAMP: A timestamp for your request
+
+## Get Connected Exchanges
+
+<img width="720px" src="https://i.imgur.com/3t5lGih.jpg">
+
+Now let's navigated to the `get connected exchanges` route to see if the exchange of our choice has been connected. We should see a response like the following.
+
+The `sync_progress` indicates the progress of the sync from a range of 1 to 100, with 100 being complete. The `synced_at` timestamp indicates when the last successful sync was.
+
+## Get User Balances
+
+<img width="720px" src="https://i.imgur.com/YM6bAzV.jpg">
+
+Once the sync is completed, we can verify that the sync was successful by navigating to the `get user balances` route and making a request.
+
+## Get User Ledger
+
+// 14 getting started
+<img width="720px" src="https://i.imgur.com/CHNvjsC.jpg">
+
+We can get the ledger (history of withdrawals, deposits, and trades) through the `get user ledger` route as well.
