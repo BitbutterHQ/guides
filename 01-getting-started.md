@@ -73,7 +73,8 @@ import * as crypto from 'crypto';
 
 const secret = '5J6AJYkZJXw97YgW...';
 
-const timestamp = Date.now(); // UTC timestamp
+//  Number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.
+const timestamp = Date.now();
 const method = 'POST';
 const requestPath = '/users';
 const body = '';
@@ -202,7 +203,7 @@ All User API HTTP requests must contain the following headers:
 
 * BB-ACCESS-SIGN: Base64 encoded signature (see Authentication)
 
-* BB-TIMESTAMP: A UTC timestamp for your request
+* BB-TIMESTAMP: A UTC timestamp for your request (number of milliseconds elapsed since January 1, 1970 00:00:00 UTC)
 
 #### Partner Credentials
 
@@ -214,7 +215,7 @@ All Partner API HTTP requests must contain the following headers:
 
 * BB-ACCESS-SIGN: Base64 encoded signature (see Authentication)
 
-* BB-TIMESTAMP: A UTC timestamp for your request
+* BB-TIMESTAMP: A UTC timestamp for your request (number of milliseconds elapsed since January 1, 1970 00:00:00 UTC)
 
 ## Get Connected Exchanges
 
