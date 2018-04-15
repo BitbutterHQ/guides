@@ -80,7 +80,8 @@ const requestPath = '/users';
 const body = '';
 
 // 1. Concatentate required parts into one string
-const prehash = timestamp + method + requestPath + body;
+//    If body is an object, stringify (remove all white spaces) 
+const prehash = timestamp + method + requestPath + JSON.stringify(body);
 
 // 2. Base64 decode string
 const key = new Buffer(secret, 'base64');
