@@ -16,17 +16,7 @@ Users can connect their cryptocurrency exchange accounts by providing a read-onl
 
 * Poloniex
 
-## Upcoming Exchanges
-
-* Coinbase OAuth
-
-* Kucoin (waiting for read only implementation)
-
-* Gemini
-
-* CEX
-
-* Bitstamp
+* Kucoin
 
 ## Connecting an Exchange
 
@@ -138,3 +128,29 @@ Similar to the balances route, we need to provide the right value to the `CONNEC
     }
 ]
 ```
+
+### Sync
+
+To update transaction history with recent activities, we can make a GET request to the following route.
+
+```
+{{ENDPOINT}}/v1/connected-exchanges/{{CONNECTED_EXCHANGE_ID}}/sync
+```
+For exchanges that do not have access control on their private keys (currently only Kucoin from our offering) we have to pass along the credentials and make a POST request to this route.
+
+```
+{{ENDPOINT}}/v1/connected-exchanges/{{CONNECTED_EXCHANGE_ID}}/sync
+```
+
+The body of the request might look something like this:
+
+```
+{ 
+  "credentials": { 
+    "api_key": "{{WRITE_API_KEY}}",
+    "secret": "{{WRITE_SECRET}}"
+  }
+}
+```
+
+This is because we don't store the credentials like we do for exchanges that provide read only keys.
