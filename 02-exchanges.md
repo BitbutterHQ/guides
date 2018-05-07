@@ -131,12 +131,13 @@ Similar to the balances route, we need to provide the right value to the `CONNEC
 
 ### Sync
 
-To update transaction history with recent activities, we can make a GET request to the following route.
+To update transaction history with recent activities, we can make a GET request to the `sync connected exchange` route.
 
 ```
 {{ENDPOINT}}/v1/connected-exchanges/{{CONNECTED_EXCHANGE_ID}}/sync
 ```
-For exchanges that do not have access control on their private keys (currently only Kucoin from our offering) we have to pass along the credentials and make a POST request to this route.
+
+For exchanges that do not have access control on their private keys (currently only Kucoin from our offering) we have to pass along the credentials and make a POST request to sync `connected exchange with credentials` route.
 
 ```
 {{ENDPOINT}}/v1/connected-exchanges/{{CONNECTED_EXCHANGE_ID}}/sync
