@@ -138,4 +138,22 @@ And now your API & Secret keys are created.
 
 ## Kucoin 
 
-Navigate to [https://www.kucoin.com/#/login](https://www.kucoin.com/#/login).
+Navigate to [https://www.kucoin.com/#/login](https://www.kucoin.com/#/login). Select "Account" in the top menu bar.
+
+<img width="720px" src="https://i.imgur.com/37w4UQ6.jpg">
+
+Select the "API Keys" tab in the left menu bar. You will need to have Account security enabled before creating API keys.  
+
+<img width="270px" src="https://i.imgur.com/ldOYcxw.jpg">
+
+Select "Create" to create a new API key. 
+
+<img width="700px" src="https://i.imgur.com/hz02l1J.jpg">
+
+You will receive an email from Kucoin to validate creation of API Keys. Select "Confirm" to continue.
+
+<img width="520px" src="https://i.imgur.com/hTQh8MC.jpg">
+
+Under API Keys section, you will see your new verified API Key and Secret. Important note: Kucoin keys are both read and write access.
+
+<img width="720px" src="https://i.imgur.com/j6f6rdv.jpg">
