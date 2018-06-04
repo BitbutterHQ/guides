@@ -35,6 +35,22 @@ To connect an exchange, navigate to `connect exchange` in Postman. This is going
 
 We can get the id of the exchange that we want by first making a request to `get all exchanges`. This will return a list of exchanges and then we can choose the exchange that we want to connect to.
 
+### Connecting GDAX
+
+GDAX has an additional credential `password` we need to include in the request body parameter. 
+
+```javascript
+{ 
+  "credentials": { 
+    "api_key": "{{GDAX_API_KEY}}",
+    "secret": "{{GDAX_SECRET}}",
+    "password": "{{GDAX_PASSWORD}}"
+  },
+  "exchange_id": "{{GDAX_EXCHANGE_ID}}",
+  "user_id": "{{USER_ID}}"
+}
+```
+
 ## Connected Exchange
 
 Once an exchange is connected, it becomes a connected exchange. We can see all the exchanges users have connected by making a request to `get user connected exchanges` route.
