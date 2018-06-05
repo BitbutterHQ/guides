@@ -64,7 +64,21 @@ Your new API key and secret will be displayed on the settings page. Take note of
 
 ## Binance
 
-Navigate to [https://bittrex.com/Account/Login](https://bittrex.com/Account/Login).
+Navigate to [https://www.binance.com/login.html](https://www.binance.com/login.html). Under account find the "API" section and select "Enable". 
+
+<img width="520px" src="https://i.imgur.com/D8iFEPo.jpg">
+
+Create a new key title and select "Create New Key".
+
+<img width="520px" src="https://i.imgur.com/ywXlKwp.jpg">
+
+A confirmation email will be sent. Select "Confirm Create".
+
+<img width="520px" src="https://i.imgur.com/S0dvL32.jpg">
+
+Navigate back to your account. Your new API Key and Secret Key are now available. Under options you should be able to select "Read Info" and deselect "Enable Trading". 
+
+<img width="720px" src="https://i.imgur.com/BstPUKV.jpg">
 
 ## Bittrex
 
