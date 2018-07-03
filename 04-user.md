@@ -14,6 +14,14 @@ If we want to see the balances of the user across all connected exchanges and wa
 {{ENDPOINT}}/v1/users/{{USER_ID}}/balances
 ```
 
+## Historical Balances
+
+If we want to see the historical balances of the user at every point the balance has changed (transaction) we can make a request to the `get user historical balances` route.
+
+```
+{{ENDPOINT}}/v1/users/{{USER_ID}}/historical-balances
+```
+
 ## Ledger
 
 To see the entire transaction history of a user across all connected accounts, we can make a request to `get user ledger` route.
